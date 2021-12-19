@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Travels, State, City, Start, End, Miles, Mileage, Calculator">
+    <meta name="description" content="This online website is a place where you can find the distance between two cities in different states of USA. If you lie to travel, this is the correct place!">
+    <meta name="author" content="Alisson Inacio">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mileage Calculator</title> 
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="get_json.js"></script>
+    <script src="validator.js"></script>
+
+</head>
+<body>
+
+    <header class="header">
+        <h1>Mileage Calculator</h1>
+    </header>
+    
+    <main class="main">
+
+        <form>
+            <input type="text" placeholder="Start City" name="startCity" id="sCity" required maxlength="12"
+            onblur="sCityValidate()" oninput="sCityField()">
+            <output id="warning1"></output>
+
+            <!-- <input type="text" onkeyup="this.value = this.value.toUpperCase();">    using JS code to upper case-->
+            <input type="text" placeholder="Start State" name="startState" id="sState" required 
+            onkeyup="this.value = this.value.toUpperCase();" maxlength="2" onblur="sStateValidate()" oninput="sStateField()">
+            <output id="warning2"></output>
+
+            <input type="text" placeholder="Destination City" name="endCity" id="eCity" required maxlength="12"
+            onblur="eCityValidate()" oninput="eCityField()">
+            <output id="warning3"></output>
+
+            <input type="text" placeholder="Destination State" name="endState" id="eState" required maxlength="2"
+            onkeyup="this.value = this.value.toUpperCase();"  onblur="eStateValidate()" oninput="eStateField()">
+            <output id="warning4"></output>
+
+            <button type="reset" onclick="styleProcess()">Reset</button>
+        </form>
+
+        <button type="button" onclick="requestJSON()">See Mileage</button>
+        
+        <div id="displayMileage"></div>
+
+    </main>
+
+    
+
+    <footer class="footer">
+        <div>
+            <h4>About this page</h4>
+        </div>
+        
+        <div>
+            <a href="https://alissoninacio1.github.io/stylized-cv/contact.html">Get Help</a>
+            <p>This web site was developed for a school work.</p>
+            <p id="copyright"> Copyright © 2021 Mileage Calculator. All rights reserved. </p>   
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+body{
+    background-color:#EDF2F2;
+}
+
+#header {
+    text-align: center;
+    background-color: #1C9AE4;
+    color:white;
+    padding: 20px;
+    border: solid 3px #80CDFA;
+    border-radius: 50px;
+}
+
+nav {
+    text-align: end;
+    padding: 10px;
+    word-spacing: 0.2em;
+    font-size: 20px;
+    background-color: #AFDDF8;
+    border-radius: 50px;    
+    transition: background-color .4s;
+    border: solid 1px #6ea6df;
+}
+
+nav:hover {
+    background-color: rgb(111, 192, 238);
+}
+
+.hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: grey;
+    border-width: 5px;
+    width: 50%;
+}
+
+#firstDiv {
+    padding: 20px;
+}
+.round {
+    border-radius: 30px;
+}
+
+#img1 {
+    position: relative; 
+    right: -78%; 
+    display: inline-block;
+}
+
+#img2 {
+    display: inline-block;
+    position: relative;
+    left: -22%;
+    
+}
+
+
+#img3 {
+    display: inline-block;
+    margin: 2% 50% 2% 40%;
+}
+
+#cool {
+    border: solid 2px #9ccaf8;
+    margin: auto;
+    padding: 50px;
+    border-radius: 30px;
+    color: white;
+    background-color: #0473b3;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+table, th, td {
+    border: 1px solid rgb(4, 14, 155);
+    background-color: #80CDFA;
+    margin: auto;
+}
+
+.forms {
+    font-family: 'Times New Roman', Times, serif;
+    color: #053c5c;
+    font-size: 18px;
+}
+
+.textEntry, .message, .button {
+    border-radius: 30px;
+    background-color: rgb(193, 207, 247);
+}

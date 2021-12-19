@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Products, Technology, Seling, Electro Store, Products">
+    <meta name="description" content="This online store is an amazing place to purchase technology and find new products. Buy your products here! The best place to be inside the technology world.">
+    <meta name="author" content="Alisson Inacio">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro Store</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="validation.js"></script>
+
+</head>
+<body>
+
+    <header  class="header">
+        <h1>Electro Store</h1>
+    </header>
+
+    <!--This div is to encapsulate and to style the form tag-->
+    <div class="form">
+        <form action="assign11.php" method="post">
+            <h2>Fill your data</h2>
+            
+            <!--information Fields-->
+            <div id="information"> 
+                <input type="text" placeholder="First Name" id="first_name" required minlength="3" maxlength="15" name="fName" onblur="validateName()" oninput="nameField()">
+                <output id="warning1"></output>
+
+                <input type="text" placeholder="Last Name" id="last_name" required minlength="3" maxlength="15" name="lName" onblur="validateLast()" oninput="lastField()">
+                <output id="warning2"></output>
+
+                <textarea  placeholder="Write your address" id="address" cols="30" rows="10" required minlength="10" maxlength="100" name="text_address"></textarea>
+
+                <input type="text" placeholder="Phone Ex.: 1112223333" id="phone" required minlength="10" maxlength="10" name="phone_number" onblur="validatePhone()" oninput="phoneField()">
+                <output id="warning3"></output>
+            </div>
+
+            <hr>
+            <!--Store fields-->
+            <div id="store"> 
+                
+                <h3>Select the number of items you'll purchase!</h3>
+
+                <div class="itemFlex" >
+                    <label>Camera - $400</label>
+                    <input type="number"  min="0" max="10" id="item_0" name="camera">
+                </div>
+
+                <div class="itemFlex" >
+                    <label>Iphone - $500</label>
+                    <input type="number" min="0" max="10" id="item_1" name="iphone">
+                </div>
+
+                <div class="itemFlex" >
+                    <label>Laptop - $800</label>
+                    <input type="number" min="0" max="10" id="item_2" name="laptop">
+                </div>
+
+                <div class="itemFlex" >
+                    <label>TV - $1000</label>
+                    <input type="number" min="0" max="10" id="item_3" name="tv">
+                </div>
+                
+
+            </div>
+            <hr>
+
+            <!--Credit Card fields-->
+            <div id="creditCard">
+
+                <h3>Select your credit card payment</h3>
+
+                <div id="cardFields">
+                    <!--Cards type-->
+                    <label>Visa</label>
+                    <input type="radio" class="card" name="card_selected" value="visa">
+
+                    <label>Mastercard</label>
+                    <input type="radio" class="card" name="card_selected" value="master">
+
+                    <label>American Express</label>
+                    <input type="radio" class="card" name="card_selected" value="american">
+                </div>
+
+                <!--Credit card number-->
+                <label>Credit Card</label>
+                <input type="text" id="credit_card" required minlength="4" maxlength="16" placeholder="Ex.: 1111222233334444" onblur="validateCard()" oninput="cardField()" >
+                <output id="warning4"></output>
+
+                <!--Credit card Expiration-->
+                <label>Credit Card Expiration</label>
+                <input type="month" id="exp_date" required min="2021-11" max="2025-12" name="cardExpiration">
+               
+                <!--final buttons-->
+                <!--assigning two events to the same element-->
+                <button type="reset" id="reset" onclick="focusMethod()">Reset</button>
+                <button type="submit">Submit</button>
+
+            </div>
+
+        </form>
+    </div>
+    
+
+    <footer class="footer">
+        <div>
+            <h4>About this page</h4>
+        </div>
+        
+        <div>
+            <a href="https://alissoninacio1.github.io/stylized-cv/contact.html">Get Help</a>
+            <p>This web site was developed for a school work.</p>
+            <p id="copyright"> Copyright © 2021 PHP Pages. All rights reserved. </p>   
+        </div>
+    </footer>
+
+    
+</body>
+</html>

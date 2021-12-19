@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Countries, Technology, AJAX, JSON">
+    <meta name="description" content="This is an amazing exercise using JSON and AJAX. If you want to know the largest cities in these countries, you only need to click on the button and select your favorite country">
+    <meta name="author" content="Alisson Inacio">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AJAX-JSON</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="display.js"></script>
+    <script src="requestJson.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <h1>AJAX and JSON</h1>
+    </header>
+
+
+    <!--items to be displayed-->
+    <div class="containerContent">
+
+        <h3>Select an option  to display on screen the largest Cities and their population</h3>
+
+        <!--Part 1-->
+        <div class="options">
+            <label>Canada</label>
+            <input id="canada" type="checkbox" onclick='mainCanada(); canadaCities()'>
+            <label>Mexico</label>
+            <input id="mexico" type="checkbox" onclick='mainMex(); mexCities()'>
+            <label>Russia</label>
+            <input id="russia" type="checkbox" onclick='mainRussia(); russiaCities()'>
+            <label>USA</label>
+            <input id="usa" type="checkbox" onclick='mainUsa(); usaCities()'>
+        </div>
+
+       <!--displayContent1-->
+        <div id="displayCanada"></div>
+        <div id="displayMex"></div>
+        <div id="displayRussia"></div>
+        <div id="displayUsa"></div>
+        
+        <!--Part 2-->
+        <div id="jsonDisplay">
+            <div id="displayContent2"></div>
+            
+            <label>Enter the file name</label>
+            <input type="text" placeholder="Type json or json1 file" minlength="1" maxlength="30" id="jsonInput">
+            <button type="button" onclick="requestJSON()">Request</button>
+        </div>
+ 
+    </div>
+    
+
+    <footer class="footer">
+        <div>
+            <h4>About this page</h4>
+        </div>
+        
+        <div>
+            <a href="https://alissoninacio1.github.io/stylized-cv/contact.html">Get Help</a>
+            <p>This web site was developed for a school work.</p>
+            <p id="copyright"> Copyright © 2021 AJAX - JSON. All rights reserved. </p>   
+        </div>
+    </footer>
+
+</body>
+</html>

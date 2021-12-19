@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="APR, Mortage Calculator, Loan Term, Years,  Loan Mount, Monthly Payment">
+    <meta name="description" content="This is the correct place to calculate your mortgage monhtly payment, come and try to use our online mortgage calculator. It is simple and fast">
+    <meta name="author" content="Alisson Inacio">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mortgage Calculator</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="calculator.js"></script>
+
+</head>
+<body>
+    
+    <header class="header">
+        <div>
+            <h1>Mortgage Calculator</h1>
+        </div>
+    </header>
+
+    <!--This will be the main content of my page where I will put all the things-->
+    <main class="main">
+      <form>
+        <input type="text" placeholder="Annual Percentage Rate (APR)" class="input_style" id="apr" 
+        title="Use a number between 0 and 25!"> 
+        <output id="warning1"></output>
+        <input type="text" placeholder="Loan Term in Years" class="input_style" id="term" 
+        title="Use a number between 0 and 40!">
+        <output id="warning2"></output>
+        <input type="text" placeholder="Loan Amount(in dollars)" class="input_style" id="amount">
+        <output id="warning3"></output>
+        <button type="reset" onclick="changeStyle()" id="clear">Clean Fields</button>
+        <button type="button" onclick="monthlyPayment()" id="calculate">Calculate Payment</button>
+        <output id="payment"></output>
+      </form>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <h4>About this page</h4>
+        </div>
+        
+        <div>
+            <a href="https://alissoninacio1.github.io/stylized-cv/contact.html">Get Help</a>
+            <p>This web site was developed for a school work.</p>
+            <p id="copyright"> Copyright © 2021 Mortgage Calculator. All rights reserved. </p>   
+        </div>
+            
+    </footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+* {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    height: 100vh;
+    margin: auto;
+    background: linear-gradient(-45deg, rgb(1, 42, 131), rgb(216, 2, 2));
+}
+
+.header {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: auto auto 10px auto;
+}
+
+.main {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.footer {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-size: 14px;
+}
+
+input {
+    display: block;
+    margin: 5px auto;
+    border-radius: 10px;
+    color: black;
+}
+
+input:hover {
+    background-color: rgb(236, 230, 230);
+    font-size: 14px;
+}
+
+button {
+    background-color:rgb(17, 0, 80) ;
+    margin: 5px auto 2px auto;
+    padding: 3px;
+    border-radius: 10px;
+    border: solid 2px rgb(230, 124, 124);
+    display: block;
+}
+
+button:hover {
+    color: rgb(193, 225, 253);
+    background-color: rgb(1, 51, 95);
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+    background-color: rgb(104, 80, 80);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px auto 5px auto;
+}
+a:hover{
+    color: rgb(243, 242, 242);
+    background-color: rgb(48, 48, 48);
+}
+
+#displayMileage {
+    display: none;
+    font-size: 14px;
+}
+
+#warning1, #warning2, #warning3, #warning4 {
+    color: rgb(177, 3, 3);
+    background-color: rgb(253, 253, 253);
+    border-radius: 5px;
+    margin: 5px auto 5px auto;
+    width: 100px;
+    display: none; 
+    text-align: center;
+    padding: 2px;
+    font-size: 12px;
+}
+
+@media only  screen and (max-width:425px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+    #displayMileage {
+        font-size: 12px;
+    }
+} 

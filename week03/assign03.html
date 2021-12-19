@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 03 Assignment</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Some internal stylesheets-->
+    <!-- At least 3 internal CSS rulesets-->
+    <style>
+        #quote {
+            font-size: 26px;
+            font-style: italic;
+            color: #904232;
+        }        
+    </style>
+    <style>
+        #nameElder {
+            font-size: 23px;
+            font-style: italic;      
+        }
+    </style>
+    <style>
+        #quoteArea {
+            text-align: center;
+            margin:auto;
+            width: 750px; 
+            padding: 25px 20px 0px 20px;
+            border:solid 2px #01A099;
+            border-radius: 50px;
+            background-color: #99F9F5;          
+        }
+    </style>
+    <style>
+        .italic {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: #5C1404;
+    }
+    </style>
+
+    </head>
+
+    <body>
+
+    <header id="header">
+        <h1>Welcome to this Week 03 Web Page Assignment</h1> 
+    </header> 
+    <br>
+
+    <nav>
+        <a href="../index.html">CS 213 Assignments</a>
+        <a href="#courseCont">Course Content</a>
+        <a href="#openMenu">Get Money</a>
+        <a href="https://www.byui.edu/">BYU-I</a>
+        <a href="https://github.com/">GitHub</a>
+    </nav>
+
+    <hr class="hr" />
+
+    <div class="italic" id="firstDiv">
+        <p>
+            My name is Alisson de Oliveira Inacio, also called Nacho. My major degree is a Bachelor of <strong> Applied Technology</strong>. I'm studying at the Bringham Young Universty - Idaho (BYU-I). 
+        </p>
+        <p>
+            If you wish to get more information about this marvelous program here: <a href="https://www.byupathway.org/bachelors-degree/applied-technology">Bachelor of Science
+            Applied Technology</a>. 
+        </p>
+        <p> 
+        I'm from Brasil and I was born in Porto Alegre, <i>Rio Grande do Sul</i> state.
+            If you want to know more about my state, you could access this page <a href="https://en.wikipedia.org/wiki/Rio_Grande_do_Sul">Rio Grande do Sul.</a>
+        </p>
+    </div>
+    <hr class="hr"/>
+
+    <div id="img1">
+        <img src="prog.jpg" alt="Technologies" class="round">
+    </div>
+   
+    <div id="img2">
+        <img src="rio.jpg" alt="Brazil" class="round">
+    </div>
+
+    <blockquote id="quoteArea">
+        <q id="quote"> 
+                As the world speaks less of Jesus Christ, let us speak more of Him.               
+        </q>
+        <p id="nameElder">Neil L. Andersen</p> 
+        <br>                     
+    </blockquote>
+
+    <div id="img3">
+        <a href="https://www.submarinecablemap.com/"><img src="cable.png" alt="Submarine Cable Map" class="round"></a>
+    </div> 
+
+    <div>
+        <p id="cool" >
+                Joe Cote said: computer programming is the process that professionals use to write code that instructs how a computer, application or software program performs. 
+                At its most basic, computer programming is a set of instructions to facilitate specific actions. 
+                If you're wondering what a computer programmer is, it's a professional that creates instructions for a computer to execute 
+                by writing and testing code that enables applications and software programs to operate successfully.
+
+                George was previously employed by NASA, the National Oceanic and Atmospheric Administration (NOAA) and other high-tech leaders, 
+                and has been integral to the development of the university’s computer science curriculum.
+                “In my jobs, I trained a lot of junior software engineers, and I would stand behind them, show them parts of code and, by giving them hands-on experience, 
+                they would eventually get better,” said George. “Having a basic knowledge of software programming, including working with others (on) teams, is a good starting point for any job.”
+                In pursuing a computer science degree with a focus on software engineering, it’s important to learn in a collaborative environment, whether in-person or virtually, 
+                as these experiences will mirror what will be expected in the workplace. George noted that students learn computer programming and build software in online labs 
+                that provide independent work opportunities along with team collaboration.
+        </p>
+    </div>
+    <br>
+
+    <form action="someContentWillAddAfter" class="forms">
+        <input type="text" placeholder="Text Entry" class="textEntry"><br>
+        <label>Your Message:</label><br>
+        <textarea name="yourMesage" cols="30" rows="10" class="message"> </textarea><br>
+        <input class="button" type="submit" value="Submit">
+        <input class="button" type="reset" value="Reset">
+    </form> 
+    <br>
+ 
+    <form action="someContentWillAddAfter" class="forms">
+        <label> <input type="checkbox" name="choice"  value="money">Do you want money?</label>
+        <label> <input type="checkbox" name="choice"  value="happiness">Do you want happiness?</label>
+        <label> <input type="checkbox" name="choice"  value="life">Do you want eternal life?</label>
+        <br>
+        <input  class="button" type="submit" value="Submit">
+        <input  class="button" type="reset" value="Reset">
+    </form> 
+    <br>
+
+    <div>
+        <label class="forms"><input type="radio" name="contact" value="Email">Email</label>
+        <label class="forms"><input type="radio" name="contact"  value="Phone">Phone</label>
+        <label class="forms"><input type="radio" name="contact"  value="Mail">Mail</label>
+        <br>
+        <input  class="button" type="submit" value="Submit">
+        <input  class="button" type="reset" value="Reset">
+    </div><br>
+
+    <select class="button" name="selector" id="openMenu" >
+        <option  class="forms" selected>Get Your Money Here</option>
+        <option  class="forms" value="1">Get Dollars</option>
+        <option  class="forms" value="2">Get Euros</option>
+        <option  class="forms" value="3">Get British Pounds</option>
+    </select><br>
+
+    
+    <footer id="courseCont">
+        <table>
+            <tr>
+                <th>Course#</th>
+                <th>Course Description</th>
+                <th>Sec#</th>
+                <th>Class Time</th>
+                <th>Class Location</th>
+            </tr>
+            <tr>
+                <td>C213 Web Engineering I</td>
+                <td> Web Fundamenals using HTML, CSS JavaScript and PHP</td>
+                <td>Fall 2021</td>
+                <td>September 2021 - December 2021</td>
+                <td>Idaho - Online Degree</td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html> 

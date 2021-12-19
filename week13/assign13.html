@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Piano, Competition, Register, Instrument, Room, Time Slot, Skill Level, Festival">
+    <meta name="description" content="This online website is idented to be a Piano Register Competition where the ability and talent has the decision.">
+    <meta name="author" content="Alisson Inacio">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Piano Competition</title> 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="display.js"></script>
+    <script src="validation.js"></script>
+    <script src="getAjax.js"></script>
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <header>
+        <h1>Register Piano Students</h1>
+    </header>
+
+    <div class="div_form">
+        <form action="assign13.php" method="post" id="piano_form">
+
+            <!-- student -->
+            
+            <h2>Student</h2>
+            <select name="performance" id="performance" onchange="showDuet()" onblur="showErr()" oninput="notErr()" required>
+                <option selected value=""> Select a Performance</option>
+                <option value="solo">Solo</option>
+                <option value="concert">Concert</option>
+                <option value="duet">Duet</option>
+            </select>
+    
+            <input type="text" placeholder="First Name" required maxlength="10" minlength="2" 
+             id="first_name" onblur="showErr()" oninput="notErr()" name="first_name">
+
+            <input type="text" placeholder="Last Name" required maxlength="10" minlength="2" 
+            name="last_name" id="last_name" onblur="showErr()" oninput="notErr()">
+
+            <input type="text" placeholder="Student ID" required maxlength="10" minlength="2" 
+            name="student_id" id="student_id" onblur="showErr()" oninput="notErr()">
+
+
+            <!-- student 2 if duet is selected-->
+            <div id="duet">
+                <h2>Student 2</h2>
+                <input type="text" placeholder="First Name" required maxlength="10" minlength="2" 
+                name="first_name_2" id="first_name_2" onblur="showDuet()" oninput="notErrDuet()">
+
+                <input type="text" placeholder="Last Name" required maxlength="10" minlength="2" 
+                name="last_name_2" id="last_name_2" onblur="showDuet()" oninput="notErrDuet()">
+
+                <input type="text" placeholder="Student ID" required maxlength="10" minlength="2" 
+                name="student_id_2" id="student_id_2" onblur="showDuet()" oninput="notErrDuet()">
+            </div>
+
+            <!--Skill Level-->
+            <div class="dislpay_selector">
+                <h2>Skill Level</h2>
+                <select name="skill" id="skill" required onblur="showErr()" oninput="notErr()">
+                    <option selected value="">Select a Skill</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermedite">Intermedite</option>
+                    <option value="pre-advanced">Pre-Advanced</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+
+            <!--Instrument-->
+            <div class="dislpay_selector">
+                <h2>Instrument</h2>
+                <select name="instrument" id="instrument" required onblur="showErr()" oninput="notErr()">
+                    <option selected value="">Select an Instrument</option>
+                    <option value="piano">Piano</option>
+                    <option value="voice">Voice</option>
+                    <option value="string">String</option>
+                    <option value="organ">Organ</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+           
+
+             <!--Location-->
+            <div class="dislpay_selector">
+                <h2>Location</h2>
+                <select name="location" id="location" required onblur="showErr()" oninput="notErr()">
+                    <option selected value="">Select a Location</option>
+                    <option value="new_york">New York</option>
+                    <option value="vwashington"> Washington</option>
+                    <option value="idaho_falls">Idaho Falls</option>
+                    <option value="seatle">Seatle</option>
+                </select>
+            </div>
+
+            <!--Room-->
+            <h3>Room</h3>
+            <input type="number" max="10" min="1" name="room" id="room" required> 
+
+            <!--Time-->
+            <h3>Time Slot</h3>
+            <input type="time" name="time_slot" id="time" required>
+
+            <!--Buttons-->
+            <button type="submit" name="register" onclick="getAjax()">Register</button>
+            <button type="reset" name="clear" id="clear" onclick="styleChanges()">Clear</button>
+
+            <div id="divErr"></div>
+            <div id="divErr2"></div>
+
+        </form>
+
+         <!--Additional display requirement-->
+        <div id="display_area"> 
+        </div>
+
+    </div>
+
+   
+
+    <footer class="footer">
+        <div>
+            <h4>About this page</h4>
+        </div>
+        
+        <div>
+            <a href="https://alissoninacio1.github.io/stylized-cv/contact.html">Get Help</a>
+            <p>This web site was developed for a school work.</p>
+            <p id="copyright"> Copyright © 2021 Piano Register. All rights reserved. </p>   
+        </div>
+    </footer>
+</body>
+</html>

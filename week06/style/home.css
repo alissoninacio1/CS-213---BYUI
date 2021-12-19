@@ -1,0 +1,48 @@
+body {
+    background: linear-gradient(45deg, rgb(153, 147, 147), rgb(255, 251, 251)); 
+}
+
+main{
+    background-color: rgb(255, 253, 250);
+    word-spacing: 2rem;
+    border-radius: 20px;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    align-items:center
+}
+img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+div {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(100, 100, 100);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+a:hover {
+    background-color: rgb(131, 127, 127);
+    color: white;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    a {
+        display: flex;
+        font-size: 22px;
+        justify-content: center;
+    }
+}

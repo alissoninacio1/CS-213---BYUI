@@ -1,0 +1,150 @@
+/* initial configurations */
+* {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    color:#51050F;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0.25rem;
+    height: 100vh;
+    margin: auto;
+    background-color: #F9E4C8;
+}
+
+
+/* header */
+header {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #FEF1E6;
+    border-radius: 0 0 20px 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/* ------------------------form ---------------------- */
+#duet {
+    display: none;
+}
+
+h2, h3 {
+    margin: 5px auto 5px auto;
+}
+
+input, select, option {
+    padding: 0.5rem;
+    color: black;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    margin: 5px auto 5px auto;
+}
+
+
+.display_selector {
+    margin: auto;
+}
+
+.div_form {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #F9CF93;
+    padding: 1rem;
+    border-top-style: outset;
+    border-right-style: inset;
+    border-left-style: outset;
+    border-bottom-style: inset;
+    margin: auto;
+}
+
+#performance {
+    display: block;
+    margin: 10px auto 10px auto;
+}
+
+#time {
+    display: block;
+    margin: auto;
+}
+
+button, a {
+    border-radius: 10px;
+    margin: 5px auto 5px auto;
+    padding: 5px; 
+    font-size: 1rem;
+    background-color: #ECAC5D;
+    color: #51050F;
+   
+}
+
+button:hover, a:hover {
+    background-color: #63111c;
+    border: solid rgb(83, 77, 33) 2px;
+    color: white;
+    font-size: 1.1rem;
+}
+::placeholder {
+    color: rgb(99, 99, 99);
+}
+
+#room {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#divErr, #divErr2 {
+    color: red;
+    margin: auto;
+    padding: 5px;
+    font-size: 1rem;
+    font-family:'Times New Roman', Times, serif;
+    display: none;
+}
+/* footer  */
+
+footer {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: #ffdec4;
+    border-radius: 20px 20px 0 0;
+    border-top: solid #f7d4b7;
+    margin: auto;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* display area */
+#display_area {
+    margin: 10px auto 10px auto;
+    padding: 5px;
+    background-color: #51050F;
+    color: white;
+    border-radius: 10px;
+    display: none;
+}
+
+/* media screen */
+@media only screen and (max-width: 425px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+    input, select, option {
+        display: block;
+        margin: 5px auto 5px auto;
+    }
+    #display_area{
+        max-width: 200px;
+    }
+}
